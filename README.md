@@ -60,7 +60,7 @@ To make sure dependencies are met, run **Debug** command first.
 #### Debug
 
 ```
-python scripts/train_evf.py --input_dir dataset/omnipush-tfrecords/ --dataset omnipush --dataset_hparams use_state=True,sequence_length=12 --model evf --model_hparams_dict hparams/bair_action_free/ours_vae_l1/debug.json --model_hparams batch_size=4 --output_dir logs/tmp/ours_vae_l1 --summary_freq 1 --image_summary_freq 1 --eval_summary_freq 1 --accum_eval_summary_freq 1 --debug_num_datasets 2
+CUDA_VISIBLE_DEVICES=0 python scripts/train_evf.py --input_dir dataset/omnipush-tfrecords/ --dataset omnipush --dataset_hparams use_state=True,sequence_length=12 --model evf --model_hparams_dict hparams/bair_action_free/ours_vae_l1/debug.json --model_hparams batch_size=4 --output_dir logs/tmp/ours_vae_l1 --summary_freq 1 --image_summary_freq 1 --eval_summary_freq 1 --accum_eval_summary_freq 1 --debug_num_datasets 2
 ```
 
 #### EVF
